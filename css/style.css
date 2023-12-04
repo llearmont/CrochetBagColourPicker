@@ -1,0 +1,502 @@
+:root {
+  --BPburgundy: #400a0a;
+  --BPchili: #C96255;
+  --BPcoralPeach: #FF8373;
+  --BPred: #eb1c34;
+  --BPcantaloupe: #FEB295;
+  --BPcarrot: #F68550;
+  --BPorange: #FF6E36;
+  --BPbabyYellow: #FAF0C0;
+  --BPgold: #F9DE5C;
+  --BPgoldenWheat: #D8A542;
+  --BPyellowBalloon: #ECE046;
+  --BPevergreen: #27512C;
+  --BPgreen: #25AF8F;
+  --BPivy: #92B39B;
+  --BPmoss: #BBC3AA;
+  --BPpaddyGreen: #1C8251;
+  --BPpine: #90AE8C;
+  --BPsageMist: #BDCDBB;
+  --BPspringGreen: #A1D586;
+  --BPbabyAqua: #C7F1E5;
+  --BPbotanyTeal: #21566D;
+  --BPicedAqua: #9FECD6;
+  --BPpeacock: #57787F;
+  --BProbinEgg: #71e6dd;
+  --BPteal: #40CDDC;
+  --BPbabyBlue: #c6ebf7;
+  --BPblue: #3B9CD3;
+  --BPnavy: #303250;
+  --BProyalBlue: #1e326e;
+  --BPsapphire: #3cbcd6;
+  --BPshadowBlue: #5379A0;
+  --BPskyBlue: #85A7E0;
+  --BPstormBlue: #ADC1C8;
+  --BPbabyLilac: #D1C7EF;
+  --BPgrandPurple: #A89DBF;
+  --BPgrapeSoda: #C592CD;
+  --BPlilac: #DDC8F1;
+  --BPpurple: #5D4286;
+  --BPpurpleAsh: #E7D5DA;
+  --BPultraViolet: #642FA2;
+  --BPcandyPink: #FF8EB6;
+  --BPdahlia: #BB2069;
+  --BPhotPink: #DA4477;
+  --BPpink: #FFC9D9;
+  --BPpinkMacaroon: #F6A3C0;
+  --BPprettyInPink: #FF66A9;
+  --BProse: #F3D5DB;
+  --BPalmond: #F0EAD5;
+  --BParan: #fcfcf0;
+  --BPburlap: #DDC0AA;
+  --BPcaramel: #C87F53;
+  --BPcoffeeGrounds: #49413A;
+  --BPparchment: #F5F5F5;
+  --BPtruffle: #9A8D7E;
+  --BPblack: #1A1A1A;
+  --BPdarkGreyHeather: #333232;
+  --BPmedGreyHeather: #999999;
+  --BPskyGrey: #E6E6E6;
+  --BPsoftGreyHeather: #adacac;
+  --BPwhite: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 4vh;
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3vh;
+  margin: 0;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3vh;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 82);
+}
+
+a:hover {
+  color: rgb(30, 30, 162);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(212, 239, 255);
+}
+
+header {
+  align-items: center;
+  background-color: rgb(105, 183, 255);
+  color: rgb(0, 0, 82);
+  height: auto;
+  padding: 1vh 3vw;
+  margin: 0;
+}
+
+/* set rules for areas */
+.content-area {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.toolbar {
+  background-color: white;
+  padding: 2vh 1vw;
+  border-radius: 3vw;
+  position: fixed;
+  top: 25vh;
+  left: 5vw;
+}
+
+.yarn {
+  cursor: pointer;
+  padding: 1vh 2vw;
+  align-items: center;
+  display: flex;
+  width: auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr 2fr;
+}
+
+.yarn:hover {
+  border-radius: 60px;
+  background-color: rgb(212, 239, 255);
+}
+
+.edging {
+  cursor: pointer;
+  padding: 1vh 2vw;
+  display: flex;
+  display: grid;
+  grid-template-columns: 3fr 1fr 2fr;
+}
+
+.edging:hover {
+  background-color: rgb(212, 239, 255);
+  border-radius: 60px;
+}
+
+.yarnball {
+  width: 4vw;
+  height: 4vw;
+  padding-right: 0;
+  border-radius: 50%;
+}
+
+.column_3 {
+  grid-column: 3;
+  text-align: center;
+}
+
+.colour-selector {
+  max-height: 20vh;
+  overflow-y: scroll;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  list-style: none;
+  width: auto;
+}
+
+.colour-selector li {
+  cursor: pointer;
+  border-radius: 60px;
+  padding: 0;
+  margin: 0;
+  width: 25vw;
+  padding: 1vh 2vw;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 3fr 1fr 2fr;
+}
+
+.colour-selector li:hover {
+  background-color: rgb(212, 239, 255);
+}
+
+.burgundy {
+  background-color: var(--BPburgundy);
+}
+
+.chili {
+  background-color: var(--BPchili);
+}
+
+.coralPeach {
+  background-color: var(--BPcoralPeach);
+}
+
+.red {
+  background-color: var(--BPred);
+}
+
+.cantaloupe {
+  background-color: var(--BPcantaloupe);
+}
+
+.carrot {
+  background-color: var(--BPcarrot);
+}
+
+.orange {
+  background-color: var(--BPorange);
+}
+
+.babyYellow {
+  background-color: var(--BPbabyYellow);
+}
+
+.gold {
+  background-color: var(--BPgold);
+}
+
+.goldenWheat {
+  background-color: var(--BPgoldenWheat);
+}
+
+.yellowBalloon {
+  background-color: var(--BPyellowBalloon);
+}
+
+.evergreen {
+  background-color: var(--BPevergreen);
+}
+
+.green {
+  background-color: var(--BPgreen);
+}
+
+.ivy {
+  background-color: var(--BPivy);
+}
+
+.moss {
+  background-color: var(--BPmoss);
+}
+
+.paddyGreen {
+  background-color: var(--BPpaddyGreen);
+}
+
+.pine {
+  background-color: var(--BPpine);
+}
+
+.sageMist {
+  background-color: var(--BPsageMist);
+}
+
+.springGreen {
+  background-color: var(--BPspringGreen);
+}
+
+.babyAqua {
+  background-color: var(--BPbabyAqua);
+}
+
+.botanyTeal {
+  background-color: var(--BPbotanyTeal);
+}
+
+.icedAqua {
+  background-color: var(--BPicedAqua);
+}
+
+.peacock {
+  background-color: var(--BPpeacock);
+}
+
+.robinEgg {
+  background-color: var(--BProbinEgg);
+}
+
+.teal {
+  background-color: var(--BPteal);
+}
+
+.babyBlue {
+  background-color: var(--BPbabyBlue);
+}
+
+.blue {
+  background-color: var(--BPblue);
+}
+
+.navy {
+  background-color: var(--BPnavy);
+}
+
+.royalBlue {
+  background-color: var(--BProyalBlue);
+}
+
+.sapphire {
+  background-color: var(--BPsapphire);
+}
+
+.shadowBlue {
+  background-color: var(--BPshadowBlue);
+}
+
+.skyBlue {
+  background-color: var(--BPskyBlue);
+}
+
+.stormBlue {
+  background-color: var(--BPstormBlue);
+}
+
+.babyLilac {
+  background-color: var(--BPbabyLilac);
+}
+
+.grandPurple {
+  background-color: var(--BPgrandPurple);
+}
+
+.grapeSoda {
+  background-color: var(--BPgrapeSoda);
+}
+
+.lilac {
+  background-color: var(--BPlilac);
+}
+
+.purple {
+  background-color: var(--BPpurple);
+}
+
+.purpleAsh {
+  background-color: var(--BPpurpleAsh);
+}
+
+.ultraViolet {
+  background-color: var(--BPultraViolet);
+}
+
+.candyPink {
+  background-color: var(--BPcandyPink);
+}
+
+.dahlia {
+  background-color: var(--BPdahlia);
+}
+
+.hotPink {
+  background-color: var(--BPhotPink);
+}
+
+.pink {
+  background-color: var(--BPpink);
+}
+
+.pinkMacaroon {
+  background-color: var(--BPpinkMacaroon);
+}
+
+.prettyInPink {
+  background-color: var(--BPprettyInPink);
+}
+
+.rose {
+  background-color: var(--BProse);
+}
+
+.almond {
+  background-color: var(--BPalmond);
+}
+
+.aran {
+  background-color: var(--BParan);
+}
+
+.burlap {
+  background-color: var(--BPburlap);
+}
+
+.caramel {
+  background-color: var(--BPcaramel);
+}
+
+.coffeeGrounds {
+  background-color: var(--BPcoffeeGrounds);
+}
+
+.parchment {
+  background-color: var(--BPparchment);
+}
+
+.truffle {
+  background-color: var(--BPtruffle);
+}
+
+.black {
+  background-color: var(--BPblack);
+}
+
+.darkGreyHeather {
+  background-color: var(--BPdarkGreyHeather);
+}
+
+.medGreyHeather {
+  background-color: var(--BPmedGreyHeather);
+}
+
+.skyGrey {
+  background-color: var(--BPskyGrey);
+}
+
+.softGreyHeather {
+  background-color: var(--BPsoftGreyHeather);
+}
+
+.white {
+  background-color: var(--BPwhite);
+}
+
+svg {
+  margin-top: 2vh;
+  padding: 50px;
+  padding-left: 15vw;
+  height: 75vh;
+}
+
+footer {
+  background-color: rgb(105, 183, 255);
+  color: rgb(0, 0, 82);
+  display: flex;
+  justify-content: space-evenly;
+  height: auto;
+  padding: 2vh 5vw;
+  margin: 0;
+  margin-top: auto;
+}
+
+.cls-1 {
+  fill: var(--BProyalBlue);
+}
+
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4 {
+  stroke-width: 0px;
+}
+
+.cls-5 {
+  fill: var(--BPsapphire);
+  stroke: black;
+}
+
+.cls-5,
+.cls-6 {
+  stroke-miterlimit: 10;
+}
+
+.cls-2 {
+  fill: var(--BProbinEgg);
+}
+
+.cls-6 {
+  fill: var(--BPbabyBlue);
+  stroke: black;
+}
+
+.cls-3 {
+  fill: black;
+}
+
+.cls-4 {
+  fill: black;
+}
+
+#Bag,
+#Drawstring,
+.scale,
+.edge {
+  cursor: url('../img/CrochetCursor8.png'), pointer;
+}
